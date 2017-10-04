@@ -5,6 +5,7 @@
 
 /**
  * @typedef {object} SystemAPI
+ * @property {Callbacks} Callbacks
  * @property {Members} Members
  * @property {Reports} Reports
  */
@@ -16,11 +17,13 @@
  * @constructor
  */
 function SystemAPI(options) {
+  var _Callbacks = require('./Callbacks');
   var _Members = require('./Members');
   var _Reports = require('./Reports');
 
   return {
-    Members: new _Members(options),
+    Callbacks: new _Callbacks(options),
+   	Members: new _Members(options),
     Reports: new _Reports(options)
   }
 }
