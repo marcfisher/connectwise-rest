@@ -36,6 +36,15 @@ function Callbacks(options) {
 inherits(Callbacks, ConnectWise);
 
 /**
+ * GET
+ * @param {Params} params
+ * @returns {Promise<Callback>}
+ */
+Callbacks.prototype.getCallback = function (params) {
+  return this.api('/system/callbacks', 'GET', params);
+};
+
+/**
  * POST
  * @param {Params} params
  * @returns {Promise<Callback>}
