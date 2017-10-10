@@ -40,7 +40,7 @@ inherits(Callbacks, ConnectWise);
  * @param {Params} params
  * @returns {Promise<Callback>}
  */
-Callbacks.prototype.getCallback = function (params) {
+Callbacks.prototype.getCallbacks = function (params) {
   return this.api('/system/callbacks', 'GET', params);
 };
 
